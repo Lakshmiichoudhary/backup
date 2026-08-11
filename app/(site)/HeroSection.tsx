@@ -1,3 +1,4 @@
+import ProjectActions from "@/components/ProjectActions";
 import { stats } from "@/utils/constants";
 import Image from "next/image";
 import React from "react";
@@ -24,26 +25,7 @@ export default function HeroSection() {
             Web & mobile apps, UI/UX, AI & agentic AI, SEO and video — Empedance
             takes your product from idea to launch, engineered end to end.
           </p>
-          <div className="flex flex-wrap sm:flex-nowrap gap-3">
-            <button className="text-sm font-semibold shrink-0 items-center flex leading-5 text-text-primary gap-2 bg-brand px-7 py-4 rounded-full">
-              Start a Project
-              <Image
-                src={"/icons/arrowRight.svg"}
-                alt="start a project"
-                width={16}
-                height={16}
-              />
-            </button>
-            <button className="text-sm shrink-0 items-center font-semibold flex leading-5 text-neutral-100 gap-2 bg-neutral-5 border border-neutral-25 px-7 py-4 rounded-full">
-              <Image
-                src={"/icons/whatsapp.svg"}
-                alt="Talk on WhatsApp"
-                width={20}
-                height={20}
-              />
-              Talk on WhatsApp
-            </button>
-          </div>
+          <ProjectActions />
         </section>
 
         <section className="hidden lg:flex lg:col-span-2  flex-col justify-center items-center text-center">

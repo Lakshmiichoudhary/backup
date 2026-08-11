@@ -216,3 +216,13 @@ export const ventures = [
     year: "2024",
   },
 ];
+
+export const allLogos = [
+  "/icons/expert-house.svg",
+  "/icons/sharjah.svg",
+  "/icons/padel-pavilion.svg",
+  "/icons/badminten.svg",
+  "/icons/cyient.svg",
+  "/icons/laundary-cafe.svg",
+  "/icons/rideally.svg",
+];

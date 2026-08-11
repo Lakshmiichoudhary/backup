@@ -1,3 +1,5 @@
+import BuildWithUsSection from "./BuildWithUsSection";
+import ClientLogos from "./ClientLogos";
 import Completedventures from "./Completedventures";
 import HeroSection from "./HeroSection";
 import OurPlatform from "./OurPlatform";
@@ -10,6 +12,8 @@ export default function Home() {
       <WhatWeDO />
       <OurPlatform />
       <Completedventures />
+      <ClientLogos />
+      <BuildWithUsSection />
     </div>
   );
 }

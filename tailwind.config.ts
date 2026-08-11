@@ -13,6 +13,7 @@ export default {
         background: {
           main: "var(--bg-main)",
           secondary: "var(--bg-secondary)",
+          surface: "var(--bg-surface)"
         },
 
         text: {
@@ -37,7 +38,9 @@ export default {
       backgroundImage: {
         radial: "var(--radial-gradient)",
         "hero-bottom-fade": "var(--hero-fade-gradient)",
-        "text-gradient":"var(--text-gradient)"
+        "text-gradient":"var(--text-gradient)",
+        "secondary-gradient":"var(--secondary-gradient)",
+        "text2-gradient":"var(--text2-gradient)",
       },
       fontFamily: {
         sans: ["var(--font-inter)", "sans-serif"],
