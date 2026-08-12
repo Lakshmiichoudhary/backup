@@ -7,7 +7,7 @@ import React from "react";
 
 export default function Completedventures() {
   return (
-    <section className="bg-background-secondary py-24 px-6 sm:px-12 xl:px-[100px] flex flex-col gap-16">
+    <section className="bg-background-main py-24 px-6 sm:px-12 xl:px-[100px] flex flex-col gap-16">
       <header className="flex flex-col gap-5">
         <TitleTag title="Completed ventures" />
         <SectionHeader

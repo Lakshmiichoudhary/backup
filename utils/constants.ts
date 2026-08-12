@@ -28,7 +28,7 @@ export const navOptions = [
   },
   {
     name: "Contact Us",
-    link: "#Outstation",
+    link: "/contact",
   },
 ];
 
@@ -208,7 +208,7 @@ export const ventures = [
     category: "Smart Home / AI",
     year: "2025",
   },
-   {
+  {
     id: "12",
     name: "Laundry Co.",
     location: "",
@@ -225,4 +225,80 @@ export const allLogos = [
   "/icons/cyient.svg",
   "/icons/laundary-cafe.svg",
   "/icons/rideally.svg",
+];
+
+export const testimonials = [
+  {
+    quote:
+      "Empedance didn't just build our app — they re-architected how our whole business operates online. Bookings up 3x.",
+    name: "Aarav Mehta",
+    role: "Founder, Fit Capital",
+  },
+  {
+    quote:
+      "The team transformed our digital experience and made the entire booking journey significantly easier for our customers.",
+    name: "Aarav Mehta",
+    role: "Founder, Fit Capital",
+  },
+  {
+    quote:
+      "From strategy to execution, Empedance helped us create a product that our customers genuinely love using.",
+    name: "Aarav Mehta",
+    role: "Founder, Fit Capital",
+  },
+];
+
+export const whoAreWe = [
+  {
+    icon: "/icons/transform.svg",
+    label: "Transform",
+    description: "We reshape digital presence end to end.",
+  },
+  {
+    icon: "/icons/shipfast.svg",
+    label: "Ship fast",
+    description: "Idea to launch, engineered to last.",
+  },
+  {
+    icon: "/icons/partner.svg",
+    label: "Partner",
+    description: "Your team, extended with real experts.",
+  },
+];
+
+export const portfolio = [
+  {
+    name: "IPPO",
+    year: "2026",
+    tagline: "One platform, every home solution",
+    category: "Web Design",
+    platforms: ["Admin", "Vendor", "Mobile App"],
+    image: "/images/ippoHomeScreen.png",
+  },
+  {
+    name: "Expert House CA",
+    year: "2025",
+    tagline:
+      "Comprehensive platform designed to streamline all your business operations.",
+    category: "Web Design",
+    platforms: ["Website Design", "Branding"],
+    image: "/images/experthouseScreen.png",
+  },
+  {
+    name: "Fit Capital",
+    year: "2024",
+    tagline: "A hub where wellness and tranquility unite.",
+    category: "Web Design",
+    platforms: ["Website Design", "Booking System", "Branding"],
+
+    image: "/images/fit-capital.png",
+  },
+  {
+    name: "RideAlly",
+    year: "2024",
+    tagline: "Ride-sharing, reimagined for daily commuters.",
+    category: "Web Design",
+    platforms: ["Mobile App", "Maps", "Payments"],
+    image: "/images/rideally.png",
+  },
 ];
