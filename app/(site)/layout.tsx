@@ -1,19 +1,19 @@
-// app/(sites)/layout.tsx
+// app/(site)/layout.tsx
 import "../globals.css";
 import "@/style/transitions.css";
 import "@/style/blog.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-export default function RootLayout({
+export default function SiteLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <div>
+    <div className="flex min-h-screen flex-col">
       <Navbar />
-      {children}
+      <main className="flex-1">{children}</main>
       <Footer />
     </div>
   );

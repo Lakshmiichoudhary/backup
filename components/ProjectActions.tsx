@@ -25,3 +25,22 @@ export default function ProjectActions() {
     </div>
   );
 }
+
+export function StartProjectButton({
+  children = "Start a project",
+}: {
+  children?: React.ReactNode;
+}) {
+  return (
+    <button className="rounded-full gap-[6px] flex justify-center items-center py-[17px] px-8 text-[#04121B] text-base leading-6 font-semibold bg-text-gradient shadow-box-shadow">
+      {children}
+
+      <Image
+        src="/icons/button-arrow.svg"
+        alt=""
+        width={16}
+        height={16}
+      />
+    </button>
+  );
+}

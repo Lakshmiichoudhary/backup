@@ -11,24 +11,55 @@ export const hrMailId = "hr@empedance.com";
 export const navOptions = [
   {
     name: "Services",
-    link: "/",
+    link: "/services",
   },
 
   {
     name: "Brochure",
-    link: "#ScheduleRide",
+    link: "/brochure",
   },
   {
     name: "Recruitment",
-    link: "#Rental",
+    link: "/empedance_recruitment",
   },
   {
     name: "Team",
-    link: "#Outstation",
+    link: "/empedance_team",
   },
   {
     name: "Contact Us",
-    link: "/contact",
+    link: "/contact-us",
+  },
+];
+
+export const contactOptions = [
+  {
+    title: "WhatsApp",
+    description: "Chat with us",
+    icon: "/icons/whatsapp.svg",
+    href: "https://wa.me/910000000000",
+    type: "external",
+  },
+  {
+    title: "Call now",
+    description: "+91 00000 00000",
+    icon: "/icons/call-contact.svg",
+    href: "tel:+910000000000",
+    type: "external",
+  },
+  {
+    title: "Email",
+    description: "hello@empedance.com",
+    icon: "/icons/mail.svg",
+    href: "mailto:hello@empedance.com",
+    type: "external",
+  },
+  {
+    title: "Office",
+    description: "Bengaluru, Karnataka, India",
+    icon: "/icons/office-location.svg",
+    href: "https://maps.google.com/?q=Bengaluru,Karnataka,India",
+    type: "external",
   },
 ];
 
@@ -99,36 +130,43 @@ export const tags = ["LLM Integration", "Automation", "Data"];
 
 export const services = [
   {
-    title: "UI/UX Design",
-    description: "Research-driven interfaces and design systems.",
-    icon: "/icons/ui-designer.svg",
-    url: "",
-  },
-  {
-    title: "SEO & Digital Marketing",
-    description: "Rank higher, convert more, grow faster.",
-    icon: "/icons/SEO.svg",
-    url: "",
-  },
-  {
     title: "Web Development",
     description: "High-performance, SEO-ready websites and web apps.",
+    describe: "Fast, secure, SEO-ready websites and cloud-native web apps built for scale and conversion.",
     icon: "/icons/webDevelopment.svg",
     url: "",
   },
   {
     title: "Mobile App Development",
     description: "Native-grade iOS & Android experiences.",
+    describe: "Native-grade iOS & Android apps — from MVP to scale — with delightful UI and smooth performance.",
     icon: "/icons/mobileApp.svg",
+    url: "",
+  },
+  {
+    title: "UI/UX Design",
+    description: "Research-driven interfaces and design systems.",
+    describe: "Research-driven UX, high-fidelity UI and scalable design systems that make products effortless.",
+    icon: "/icons/ui-designer.svg",
+    url: "",
+  },
+  {
+    title: "SEO & Digital Marketing",
+    description: "Rank higher, convert more, grow faster.",
+    describe: "Technical SEO, content and paid campaigns that drive qualified traffic and compounding growth.",
+    icon: "/icons/SEO.svg",
     url: "",
   },
   {
     title: "Video Production & Editing",
     description: "Shooting and post-production that sells.",
+    describe: "Product films, brand stories and social content — from concept and shoot to motion graphics.",
     icon: "/icons/videoProduction.svg",
     url: "",
   },
 ];
+
+
 
 export const ventures = [
   {
@@ -301,4 +339,133 @@ export const portfolio = [
     platforms: ["Mobile App", "Maps", "Payments"],
     image: "/images/rideally.png",
   },
+];
+
+export const platforms = [
+  {
+    productName: "WhatsApp Business Automation",
+    tagline: "Automate conversations. Scale support. One dashboard.",
+    category: ["automation", "dashboard"],
+    icon: "/icons/whatsapp-automation.svg",
+    description:
+      "A complete WhatsApp automation suite — bulk messaging, template management, no-code bot training, live analytics and a developer-friendly REST API.",
+    features: ["Bulk Messaging", "Bot Training", "Analytics", "REST API"],
+     image: "/images/ippoHomeScreen.png",
+  },
+  {
+    productName: "School Management System",
+    tagline: "Everything a school needs to run — in one system.",
+    category: [ "dashboard"],
+    icon: "/icons/school-management-icon.png",
+    description:
+      "A complete WhatsApp automation suite — bulk messaging, template management, no-code bot training, live analytics and a developer-friendly REST API.",
+    features: [ "Analytics", "REST API"],
+     image: "/images/ippoHomeScreen.png",
+  },
+  {
+    productName: "Blue Cab",
+    tagline: "Ride booking and fleet management, built to white-label.",
+    category: [ "dashboard"],
+    icon: "/icons/blue-cab-icon.svg",
+    description:
+      "A complete WhatsApp automation suite — bulk messaging, template management, no-code bot training, live analytics and a developer-friendly REST API.",
+    features: [ "Analytics", "REST API"],
+     image: "/images/ippoHomeScreen.png",
+  },
+];
+
+export const capabilities = [
+  "Full service & capability overview",
+  "Our 3 white-label platforms in detail",
+  "Selected case studies & outcomes",
+  "Engagement models & process",
+];
+
+export const agenticAiStats = [
+  {
+    value: "10+",
+    label: "AI features shipped",
+  },
+  {
+    value: "24/7",
+    label: "Autonomous workflows",
+  },
+  {
+    value: "100%",
+    label: "Observability built in",
+  },
+];
+
+export const weDeliver = [
+  {
+    id: "01",
+    label: "AI Copilots & Assistants",
+    description: "n-product copilots that understand your data and take action — grounded on your knowledge base with retrieval, tools and guardrails.",
+  },
+  {
+    id: "02",
+    label: "Agentic Workflows",
+    description: "Autonomous, multi-step agents that plan, call tools and complete tasks end to end, with human-in-the-loop checkpoints where it matters.",
+  },
+  {
+    id: "03",
+    label: "RAG & Knowledge Systems",
+    description: "Retrieval-augmented generation over your documents, tickets and databases so answers are accurate, cited and always up to date.",
+  },
+  {
+    id: "04",
+    label: "Intelligent Automation",
+    description: "Replace manual, repetitive workflows with AI pipelines that classify, extract, summarize and route — wired straight into your stack.",
+  },
+  {
+    id: "05",
+    label: "Predictive & Data Products",
+    description: "Forecasting, scoring and recommendation engines that turn your data into decisions and revenue.",
+  },
+  {
+    id: "06",
+    label: "LLM Ops & Evaluation",
+    description: "Prompt management, evals, tracing, cost controls and safety filters so your AI stays reliable as it scales.",
+  },
+];
+
+export const workSteps = [
+  {
+    id: "1",
+    label: "Discovery",
+    description: "We map the workflow, data and the ROI case for AI.",
+  },
+  {
+    id: "2",
+    label: "Data & Retrieval",
+    description: "We structure, index and secure your knowledge sources",
+  },
+  {
+    id: "3",
+    label: "Prototype",
+    description: "A working proof-of-value in days, measured against real evals.",
+  },
+  {
+    id: "4",
+    label: "Engineering",
+    description: "We productionize with guardrails, tools and observability.",
+  },
+  {
+    id: "5",
+    label: "Evaluate",
+    description: "Accuracy, safety and cost tested against a golden dataset.",
+  },
+  {
+    id: "6",
+    label: "Scale & Improve",
+    description: "Continuous tuning as usage and data grow.",
+  },
+];
+
+export const technologies = [
+  "OpenAI",
+  "Anthropic",
+  "Gemini",
+  "LangChain",
+  "LlamaIndex","Vector DBs", "Python", "TypeScript", "Supabase","Vercel AI SDK"
 ];

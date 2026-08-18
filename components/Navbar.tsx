@@ -51,7 +51,6 @@ export default function Navbar() {
         />
       )}
 
-      
       <div className="z-20 flex w-full items-center justify-between md:w-auto">
         <Link href="/">
           <Image
@@ -109,17 +108,17 @@ export default function Navbar() {
       <div
         className={`
           z-10 flex items-center font-medium
-          md:static md:flex
+          md:static md:flex md:pointer-events-auto
           max-md:absolute max-md:left-0 max-md:right-0 max-md:top-0
           max-md:min-h-screen max-md:flex-col
-         
+          
           max-md:bg-background-secondary
           max-md:pb-8 max-md:pt-28
           max-md:shadow-sm
           ${
             isNavOpen
-              ? "navSlideDown"
-              : "pointer-events-none hidden md:flex"
+              ? "navSlideDown pointer-events-auto"
+              : "max-md:pointer-events-none max-md:hidden"
           }
         `}
       >
@@ -131,10 +130,10 @@ export default function Navbar() {
           "
         >
           {navOptions?.map((option) => (
-            <li key={option.link} className="">
+            <li key={option.link}>
               <Link
                 href={option.link}
-                className="cursor-pointer transition-opacity hover:opacity-70"
+                className="cursor-pointer hover:scale-125"
               >
                 {option.name}
               </Link>

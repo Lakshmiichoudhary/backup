@@ -1,4 +1,5 @@
 //Strictly Static
+import Decor from "@/components/Decore";
 import SectionHeader from "@/components/SectionHeaderProps";
 import TitleTag from "@/components/TitleTag";
 import { services, tags } from "@/utils/constants";
@@ -27,9 +28,10 @@ export default function WhatWeDO() {
       <div className="flex flex-col xl:flex-row gap-8">
         <div className="flex w-full flex-col gap-5 ">
           <article
-            className="bg-radial border
+            className="bg-radial border relative overflow-hidden
         border-neutral-8 p-10 rounded-[22px] flex flex-col gap-[72px]"
           >
+            <Decor variant="card" />
             <div className="flex flex-col gap-5 max-w-md">
               <Image
                 src="/icons/AI-Integrated.svg"
@@ -57,7 +59,7 @@ export default function WhatWeDO() {
               </div>
             </div>
             <Link
-              href={""}
+              href={"services/agentic-ai-engineering"}
               className="text-brand text-sm font-semibold leading-5 flex gap-[6px] items-center"
             >
               Learn more
@@ -71,15 +73,15 @@ export default function WhatWeDO() {
           </article>
 
           <article className="flex flex-col md:flex-row gap-5">
-            <ServiceCard {...services[0]} className="flex-1" />
+            <ServiceCard {...services[2]} className="flex-1" />
 
-            <ServiceCard {...services[1]} className="flex-1" />
+            <ServiceCard {...services[3]} className="flex-1" />
           </article>
         </div>
 
         <article className="sm:min-w-[392px] grid md:grid-cols-2 xl:grid-cols-1 gap-5 ">
-          <ServiceCard {...services[2]} />
-          <ServiceCard {...services[3]} />
+          <ServiceCard {...services[0]} />
+          <ServiceCard {...services[1]} />
           <ServiceCard {...services[4]} />
         </article>
       </div>
@@ -93,13 +95,15 @@ interface ServiceCardProps {
   icon: string;
   featured?: boolean;
   className?: string;
+  descriptionClassName?: string;
 }
 
-function ServiceCard({
+export function ServiceCard({
   title,
   description,
   icon,
   className = "",
+  descriptionClassName = "",
 }: ServiceCardProps) {
   return (
     <article
@@ -128,7 +132,7 @@ function ServiceCard({
 
       <p
         className={`
-           text-neutral-80 text-sm leading-[22px] mt-[2px]
+           text-neutral-80 text-sm leading-[22px] mt-[2px] ${descriptionClassName}
         `}
       >
         {description}
