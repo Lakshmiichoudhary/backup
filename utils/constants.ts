@@ -1,3 +1,12 @@
+import {
+  FaWhatsapp,
+  FaImage,
+  FaCompressArrowsAlt,
+  FaLink,
+  FaPen,
+} from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+
 export const companyName = "Sharjah Cricket Stadium";
 export const whatsaapNumber = "+919113887558";
 export const mobileNo = "+919113887558";
@@ -85,12 +94,13 @@ export const footerSections = [
     title: "Get in touch",
     items: [
       {
-        label: "Pune, Maharashtra, India",
-        href: "https://maps.google.com",
+        label:
+          "4th Floor, Bhive Workspace HSR Layout Sector - 6 Bengaluru India - 560012",
+        href: "https://maps.app.goo.gl/hMazTP4GPcrwvKBe6",
       },
       {
-        label: "hello@empedance.com",
-        href: "mailto:hello@empedance.com",
+        label: "help@empedance.com",
+        href: "mailto:help@empedance.com",
       },
     ],
     button: {
@@ -101,10 +111,31 @@ export const footerSections = [
 ];
 
 export const socialsLinks = [
-  { linkType: "/icons/linkedin.svg", url: "" },
-  { linkType: "/icons/insta.svg", url: "" },
+  {
+    linkType: "/icons/linkedin.svg",
+    url: "https://www.linkedin.com/company/empedance-consultancy-services",
+  },
+  {
+    linkType: "/icons/insta.svg",
+    url: "https://www.instagram.com/empedance_consultancy_services/",
+  },
   { linkType: "/icons/twitter.svg", url: "" },
-  { linkType: "/icons/github.svg", url: "" },
+  { linkType: "/icons/github.svg", url: "https://github.com/Empedance" },
+];
+
+export const privacyOptions = [
+  {
+    name: "Terms & Conditions",
+    link: "/terms-and-conditions",
+  },
+  {
+    name: "Privacy Policy",
+    link: "/privacy_policy",
+  },
+  {
+    name: "Data Deletion",
+    link: "/data-deletion",
+  },
 ];
 
 export const stats = [
@@ -132,41 +163,44 @@ export const services = [
   {
     title: "Web Development",
     description: "High-performance, SEO-ready websites and web apps.",
-    describe: "Fast, secure, SEO-ready websites and cloud-native web apps built for scale and conversion.",
+    describe:
+      "Fast, secure, SEO-ready websites and cloud-native web apps built for scale and conversion.",
     icon: "/icons/webDevelopment.svg",
     url: "",
   },
   {
     title: "Mobile App Development",
     description: "Native-grade iOS & Android experiences.",
-    describe: "Native-grade iOS & Android apps — from MVP to scale — with delightful UI and smooth performance.",
+    describe:
+      "Native-grade iOS & Android apps — from MVP to scale — with delightful UI and smooth performance.",
     icon: "/icons/mobileApp.svg",
     url: "",
   },
   {
     title: "UI/UX Design",
     description: "Research-driven interfaces and design systems.",
-    describe: "Research-driven UX, high-fidelity UI and scalable design systems that make products effortless.",
+    describe:
+      "Research-driven UX, high-fidelity UI and scalable design systems that make products effortless.",
     icon: "/icons/ui-designer.svg",
     url: "",
   },
   {
     title: "SEO & Digital Marketing",
     description: "Rank higher, convert more, grow faster.",
-    describe: "Technical SEO, content and paid campaigns that drive qualified traffic and compounding growth.",
+    describe:
+      "Technical SEO, content and paid campaigns that drive qualified traffic and compounding growth.",
     icon: "/icons/SEO.svg",
     url: "",
   },
   {
     title: "Video Production & Editing",
     description: "Shooting and post-production that sells.",
-    describe: "Product films, brand stories and social content — from concept and shoot to motion graphics.",
+    describe:
+      "Product films, brand stories and social content — from concept and shoot to motion graphics.",
     icon: "/icons/videoProduction.svg",
     url: "",
   },
 ];
-
-
 
 export const ventures = [
   {
@@ -350,27 +384,27 @@ export const platforms = [
     description:
       "A complete WhatsApp automation suite — bulk messaging, template management, no-code bot training, live analytics and a developer-friendly REST API.",
     features: ["Bulk Messaging", "Bot Training", "Analytics", "REST API"],
-     image: "/images/ippoHomeScreen.png",
+    image: "/images/ippoHomeScreen.png",
   },
   {
     productName: "School Management System",
     tagline: "Everything a school needs to run — in one system.",
-    category: [ "dashboard"],
+    category: ["dashboard"],
     icon: "/icons/school-management-icon.png",
     description:
       "A complete WhatsApp automation suite — bulk messaging, template management, no-code bot training, live analytics and a developer-friendly REST API.",
-    features: [ "Analytics", "REST API"],
-     image: "/images/ippoHomeScreen.png",
+    features: ["Analytics", "REST API"],
+    image: "/images/ippoHomeScreen.png",
   },
   {
     productName: "Blue Cab",
     tagline: "Ride booking and fleet management, built to white-label.",
-    category: [ "dashboard"],
+    category: ["dashboard"],
     icon: "/icons/blue-cab-icon.svg",
     description:
       "A complete WhatsApp automation suite — bulk messaging, template management, no-code bot training, live analytics and a developer-friendly REST API.",
-    features: [ "Analytics", "REST API"],
-     image: "/images/ippoHomeScreen.png",
+    features: ["Analytics", "REST API"],
+    image: "/images/ippoHomeScreen.png",
   },
 ];
 
@@ -400,32 +434,38 @@ export const weDeliver = [
   {
     id: "01",
     label: "AI Copilots & Assistants",
-    description: "n-product copilots that understand your data and take action — grounded on your knowledge base with retrieval, tools and guardrails.",
+    description:
+      "n-product copilots that understand your data and take action — grounded on your knowledge base with retrieval, tools and guardrails.",
   },
   {
     id: "02",
     label: "Agentic Workflows",
-    description: "Autonomous, multi-step agents that plan, call tools and complete tasks end to end, with human-in-the-loop checkpoints where it matters.",
+    description:
+      "Autonomous, multi-step agents that plan, call tools and complete tasks end to end, with human-in-the-loop checkpoints where it matters.",
   },
   {
     id: "03",
     label: "RAG & Knowledge Systems",
-    description: "Retrieval-augmented generation over your documents, tickets and databases so answers are accurate, cited and always up to date.",
+    description:
+      "Retrieval-augmented generation over your documents, tickets and databases so answers are accurate, cited and always up to date.",
   },
   {
     id: "04",
     label: "Intelligent Automation",
-    description: "Replace manual, repetitive workflows with AI pipelines that classify, extract, summarize and route — wired straight into your stack.",
+    description:
+      "Replace manual, repetitive workflows with AI pipelines that classify, extract, summarize and route — wired straight into your stack.",
   },
   {
     id: "05",
     label: "Predictive & Data Products",
-    description: "Forecasting, scoring and recommendation engines that turn your data into decisions and revenue.",
+    description:
+      "Forecasting, scoring and recommendation engines that turn your data into decisions and revenue.",
   },
   {
     id: "06",
     label: "LLM Ops & Evaluation",
-    description: "Prompt management, evals, tracing, cost controls and safety filters so your AI stays reliable as it scales.",
+    description:
+      "Prompt management, evals, tracing, cost controls and safety filters so your AI stays reliable as it scales.",
   },
 ];
 
@@ -443,7 +483,8 @@ export const workSteps = [
   {
     id: "3",
     label: "Prototype",
-    description: "A working proof-of-value in days, measured against real evals.",
+    description:
+      "A working proof-of-value in days, measured against real evals.",
   },
   {
     id: "4",
@@ -467,5 +508,69 @@ export const technologies = [
   "Anthropic",
   "Gemini",
   "LangChain",
-  "LlamaIndex","Vector DBs", "Python", "TypeScript", "Supabase","Vercel AI SDK"
+  "LlamaIndex",
+  "Vector DBs",
+  "Python",
+  "TypeScript",
+  "Supabase",
+  "Vercel AI SDK",
+];
+
+export const empedanceAdvantages = [
+  {
+    label: "5x",
+    description: "Faster manual workflows",
+  },
+  {
+    label: "Days",
+    description: "To first working prototype",
+  },
+  {
+    label: "0",
+    description: "Vendor lock-in — your models, your data",
+  },
+  {
+    label: "100%",
+    description: "Traced & evaluated outputs",
+  },
+];
+
+export const agenticAiQuestions = [
+  {
+    question: "Can you add AI to our existing product?",
+    answer:
+      "Yes. Most of our AI work is integrated into products that already exist — we plug copilots, agents and automation into your current stack without a rebuild.",
+  },
+  {
+    question: "How do you keep AI outputs accurate and safe?",
+    answer:
+      "Yes. Most of our AI work is integrated into products that already exist — we plug copilots, agents and automation into your current stack without a rebuild.",
+  },
+  {
+    question: "Which models do you use?",
+    answer:
+      "Yes. Most of our AI work is integrated into products that already exist — we plug copilots, agents and automation into your current stack without a rebuild.",
+  },
+];
+
+export const toolsNavOptions = [
+  { name: "WhatsApp controller", navLink: "/tools", icon: FaWhatsapp },
+  {
+    name: "Email controller",
+    navLink: "/tools/email_marketing",
+
+    icon: MdEmail,
+  },
+  { name: "WebP Converter", navLink: "/tools/webp-converter", icon: FaImage },
+  {
+    name: "Image Compressor",
+    navLink: "/tools/image-compressor",
+    icon: FaCompressArrowsAlt,
+  },
+  {
+    name: "Image URL Generator",
+    navLink: "/tools/image-upload-tool",
+    icon: FaLink,
+  },
+  { name: "Word2HTML", navLink: "/tools/create-new-blog", icon: FaPen },
 ];

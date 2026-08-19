@@ -75,11 +75,6 @@ export default {
         xs: "480px",
         mxl: "1442px",
       },
-      letterSpacing: {
-        sm28: "0.28px",
-        md32: "0.32px",
-        lg36: "0.36px",
-      },
     },
   },
   plugins: [require("tailwind-scrollbar-hide")],

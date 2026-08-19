@@ -9,7 +9,7 @@ export default function Header() {
         dotColor="bg-neutral-100"
         className="border-neutral-20"
       />
-      <h1 className="text-neutral-100 font-heading font-bold text-7xl tracking-[-1.8px] max-w-4xl">
+      <h1 className="text-neutral-100 font-heading font-bold text-4xl md:text-7xl tracking-[-1.8px] max-w-4xl">
         A full-stack studio for your entire product.
       </h1>
       <p className="text-neutral-70 text-lg leading-[29px] max-w-2xl">

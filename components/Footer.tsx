@@ -1,4 +1,10 @@
-import { footerSections, navOptions, socialsLinks } from "@/utils/constants";
+import {
+  footerSections,
+  navOptions,
+  privacyOptions,
+  socialsLinks,
+  whatsaapNumber,
+} from "@/utils/constants";
 import { year } from "@/utils/functions/UniversalFunctions";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,9 +19,9 @@ export default function Footer() {
             "linear-gradient(90deg, rgba(34, 167, 232, 0) 0%, #22A7E8 50%, rgba(34, 167, 232, 0) 100%)",
         }}
       />
-      <div className="flex flex-col lg:flex-row w-full lg:justify-between gap-10 lg:gap-12">
-        <div className="flex flex-col sm:flex-row gap-10 sm:gap-16 md:gap-20">
-          <div className="flex flex-col gap-6">
+      <div className="flex flex-col lg:flex-row w-full justify-center items-center lg:items-start lg:justify-between gap-10 lg:gap-12">
+        <div className="flex flex-col lg:flex-row gap-10 sm:gap-5 lg:gap-20">
+          <div className="flex flex-col justify-center items-center lg:items-start lg:justify-start text-center lg:text-start gap-6">
             <Link href="/" aria-label="Home">
               <Image
                 src="/images/logo.png"
@@ -32,7 +38,12 @@ export default function Footer() {
 
             <div className="flex gap-3">
               {socialsLinks?.map((option, i) => (
-                <Link href={option.url} key={i} >
+                <Link
+                  href={option.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  key={i}
+                >
                   <Image
                     src={option.linkType}
                     alt={option.url}
@@ -46,17 +57,17 @@ export default function Footer() {
 
           <nav
             aria-label="Explore Navigation"
-            className="flex flex-col pt-0 sm:pt-4 gap-6"
+            className="flex flex-col justify-center items-center lg:justify-start lg:items-start pt-0 sm:pt-4 gap-6"
           >
             <h3 className="text-neutral-50 uppercase leading-5 tracking-[1.4px] font-bold text-sm font-heading">
               Explore
             </h3>
-            <ul className="text-lg flex flex-col gap-4 list-none p-0 m-0">
+            <ul className="text-lg flex flex-row flex-wrap lg:flex-col lg:justify-start lg:items-start justify-center items-center gap-4 list-none p-0 m-0">
               {navOptions?.map((option) => (
                 <li key={option.name}>
                   <Link
                     href={option.link}
-                    className="gap-8 text-sm font-medium leading-5 text-neutral-80 capitalize hover:text-neutral-50 transition-colors"
+                    className="gap-8 text-sm font-medium leading-5 text-neutral-80 capitalize hover:text-neutral-70 transition-colors"
                   >
                     {option.name}
                   </Link>
@@ -66,23 +77,25 @@ export default function Footer() {
           </nav>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 xl:gap-24 pt-0 lg:pt-4">
+        <div className="grid xs:grid-cols-2 gap-10 md:gap-24 items-start pt-0 lg:pt-4">
           {footerSections?.map((section) => (
             <nav
               key={section.title}
               aria-label={section.title}
-              className="flex flex-col gap-6"
+              className="flex flex-col justify-center items-center text-center lg:justify-start lg:items-start lg:text-start gap-6"
             >
               <h3 className="text-neutral-50 uppercase leading-5 tracking-[1.4px] font-bold text-sm font-heading">
                 {section.title}
               </h3>
 
-              <ul className="flex flex-col gap-4 list-none p-0 m-0">
+              <ul className="flex flex-col gap-4 list-none p-0 m-0 lg:max-w-56">
                 {section.items.map((item) => (
                   <li key={item.label}>
                     <Link
+                      target="_blank"
+                      rel="noopener noreferrer"
                       href={item.href}
-                      className="text-sm font-medium leading-5 text-neutral-80 hover:text-neutral-50 transition-colors"
+                      className="text-sm font-medium leading-5 text-neutral-80 hover:text-neutral-70 transition-colors"
                     >
                       {item.label}
                     </Link>
@@ -93,7 +106,7 @@ export default function Footer() {
               {section.button && (
                 <div>
                   <Link
-                    href={section.button.href}
+                    href={"tel:" + whatsaapNumber}
                     className="inline-flex w-fit gap-2 items-center justify-center rounded-full bg-neutral-100 px-5 py-3 text-sm font-semibold text-background-main hover:opacity-90 transition-opacity"
                   >
                     {section.button.label}
@@ -112,10 +125,20 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-neutral-10 mt-12 sm:mt-16">
-        <small className="block text-sm font-medium leading-5 text-neutral-50 py-8">
+      <div className="border-t border-neutral-10 text-center mt-12 sm:mt-16 flex flex-col py-8 gap-2 justify-center items-center lg:flex-row lg:justify-between">
+        <small className="block text-sm font-medium leading-5 text-neutral-50">
           © {year} Empedance Consultancy Services Pvt Ltd. All rights reserved.
         </small>
+        <div className="flex flex-row flex-wrap justify-center gap-4 text-sm font-medium leading-5 text-neutral-50">
+          {privacyOptions?.map((item, index) => (
+            <span key={item.link} className="flex  gap-4">
+              <Link href={item.link} className="hover:text-neutral-70">
+                {item.name}
+              </Link>
+              {index !== privacyOptions.length - 1 && <span>|</span>}
+            </span>
+          ))}
+        </div>
       </div>
     </footer>
   );

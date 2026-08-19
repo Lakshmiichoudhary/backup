@@ -5,6 +5,8 @@ import HowWeWork from "./HowWeWork";
 import ToolsAndTechnology from "./ToolsAndTechnology";
 import ExploreMore from "./ExploreMore";
 import StartProject from "./StartProject";
+import Advantages from "./Advantages";
+import { Faq } from "./Faq";
 
 export default function page() {
   return (
@@ -13,6 +15,8 @@ export default function page() {
       <WhatWeDeliver />
       <HowWeWork />
       <ToolsAndTechnology />
+      <Advantages />
+      <Faq />
       <ExploreMore />
       <StartProject />
     </section>

@@ -28,7 +28,7 @@ export default function AgenticAI() {
         title="AI product engineering"
         className="border-neutral-20 text-neutral-80"
       />
-      <h1 className="text-neutral-100 font-heading font-bold text-7xl tracking-[-1.8px] max-w-4xl">
+      <h1 className="text-neutral-100 font-heading font-bold text-4xl md:text-7xl tracking-[-1.8px] max-w-4xl">
         AI & Agentic AI Engineering
       </h1>
       <p className="text-xl text-neutral-90 font-medium">

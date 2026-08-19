@@ -10,7 +10,7 @@ export default function Services() {
     <section className="w-full bg-background-secondary py-24 px-6 sm:px-12 xl:px-[100px] flex flex-col gap-6">
       <article
         className="bg-radial border relative overflow-hidden
-        border-neutral-8 p-10 rounded-[22px] flex flex-col gap-8"
+        border-neutral-8 p-6 md:p-10 rounded-[22px] flex flex-col gap-8"
       >
         <Decor variant="card" />
         <div className="flex flex-col gap-5">
@@ -26,7 +26,7 @@ export default function Services() {
             <p className="text-brand text-xs font-medium uppercase tracking-[1.2px]">
               AI product engineering
             </p>
-            <h2 className="text-5xl font-heading text-neutral-100 font-bold leading-[48px] tracking-[-1.2px]">
+            <h2 className="text-3xl md:text-5xl font-heading text-neutral-100 font-bold leading-[48px] tracking-[-1.2px]">
               AI & Agentic AI Engineering
             </h2>
           </div>

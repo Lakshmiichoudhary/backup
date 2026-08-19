@@ -1,186 +1,239 @@
-/* styles/blog.css */
 .blog-page {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #000000cc;
-  margin: 0 auto;
-}
-/* Basic HTML headings without extra styling */
-.blog-page-h1 {
-  color: #0288d1;
-  font-size: 32px;
-  font-weight: bold;
-  text-align: left;
-  margin-bottom: 16px;
-}
-.blog-page h2 {
-  font-size: 22px;
-  font-weight: bold;
-  margin-top: 3rem;
-  margin-bottom: 1rem;
-}
-.blog-page h3 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 6px;
+  line-height: 1.7;
+  color: var(--text-main);
+  background: var(--bg-main);
 }
 
-/* Paragraphs and links */
+.terms-header {
+  margin-bottom: 32px;
+}
+
+.blog-page-h1 {
+  margin: 0 0 12px;
+  font-size: 36px;
+  line-height: 1.2;
+  font-weight: 700;
+
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.last-updated {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+.blog-page section {
+  margin-top: 40px;
+}
+
+.blog-page section:first-of-type {
+  margin-top: 0;
+}
+
+.blog-page h2 {
+  margin: 0 0 14px;
+  color: var(--text-main);
+  font-size: 24px;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
 .blog-page p {
-  margin-bottom: 1rem;
+  margin: 0 0 16px;
+  color: var(--text-secondary);
+  font-size: 16px;
 }
+
+.blog-page strong {
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+.blog-page ul {
+  margin: 0 0 18px;
+  padding-left: 24px;
+  color: var(--text-secondary);
+  list-style-type: disc;
+}
+
+.blog-page li {
+  margin-bottom: 8px;
+  padding-left: 4px;
+  color: var(--text-secondary);
+}
+
+.blog-page li::marker {
+  color: var(--brand-main);
+}
+
 .blog-page li > p {
-  margin-bottom: 0.25rem;
+  margin-bottom: 4px;
 }
-.blog-page li > strong {
-  margin-top: 1rem;
-}
+
+/* Links */
 
 .blog-page a {
-  color: #0070f3;
+  color: var(--brand-main);
+  font-weight: 500;
   text-decoration: none;
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease;
 }
 
 .blog-page a:hover {
+  color: #0288d1;
   text-decoration: underline;
 }
 
-/* Image styles */
-.blog-page img {
-  max-width: 100%;
-  width: 100%;
-  height: auto;
-  margin: 16px 0;
+.blog-page a:focus-visible {
+  outline: 2px solid var(--brand-main);
+  outline-offset: 3px;
+  border-radius: 2px;
 }
 
-/* Blockquote styles */
-.blog-page blockquote {
-  border-left: 4px solid #ccc;
-  padding-left: 16px;
-  margin-left: 0;
-  font-style: italic;
+.terms-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  margin: 0;
+  padding: 20px;
+  border: 1px solid var(--neutral-10);
+  border-radius: 12px;
+
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  font-style: normal;
 }
 
-/* List styles */
-.blog-page ul {
-  margin-left: 20px;
-  list-style-type: disc; /* Displays a disc for unordered lists */
-}
-.blog-page ul ul {
-  margin-left: 20px;
-  margin-bottom: 1rem;
-  list-style-type: circle; /* Displays a disc for unordered lists */
+.terms-contact > strong {
+  margin-bottom: 6px;
 }
 
-.blog-page li ul {
-  margin-left: 20px;
-  margin-bottom: 1rem;
-  /* Displays a disc for unordered lists */
+.terms-contact p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin: 0;
 }
 
-.blog-page ol {
-  margin-left: 20px;
-  list-style-type: decimal; /* Displays numbers for ordered lists */
+.terms-icon {
+  flex-shrink: 0;
+  font-size: 20px;
+  color: var(--brand-main);
 }
 
-/* Make the ol numbers bold if the li contains a strong tag */
-ol li:has(strong) {
-  font-weight: bold;
+/* Optional Surface Styling */
+
+.blog-page article {
+  position: relative;
 }
 
-/* Ensure only <strong> elements remain bold, and other text stays normal */
-ol li:has(strong) p,
-ol li:has(strong) p *:not(strong) {
-  font-weight: normal;
+.blog-page article::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: -100px;
+  width: 350px;
+  height: 350px;
+  pointer-events: none;
+  background: var(--radial-gradient);
+  opacity: 0.8;
+  z-index: -1;
 }
 
-/* Add vertical margin if <p> contains only a <strong> */
-ol li p:has(> strong:only-child) {
-  margin: 10px 0; /* Adjust as needed */
+/* Accessibility / SEO */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
-/* styles/blog.css */
+/* Mobile */
+
 @media screen and (max-width: 768px) {
-  /* Blog page styles for smaller screens */
   .blog-page {
-    padding: 0 10px;
-    font-size: 14px; /* Smaller font size for better readability */
+    width: 100%;
+    margin-bottom: 24px;
+    padding: 120px 20px;
+    font-size: 14px;
   }
 
-  /* Blog heading styles */
+  .terms-header {
+    margin-bottom: 24px;
+  }
+
   .blog-page-h1 {
-    font-size: 26px; /* Smaller heading size */
-    margin-bottom: 12px;
+    font-size: 28px;
+    line-height: 1.25;
+    margin-bottom: 10px;
+  }
+
+  .last-updated {
+    font-size: 14px;
+  }
+
+  .blog-page section {
+    margin-top: 32px;
   }
 
   .blog-page h2 {
-    font-size: 20px; /* Smaller subheading size */
-    margin-top: 2rem;
+    font-size: 21px;
+    line-height: 1.35;
+    margin-bottom: 12px;
   }
 
-  .blog-page h3 {
-    font-size: 22px; /* Smaller subheading size */
-    margin-bottom: 4px;
-  }
-
-  /* Paragraph and list styles */
   .blog-page p {
-    font-size: 15px; /* Adjust paragraph text for smaller screens */
-    margin-bottom: 0.75rem;
-    margin-top:20px;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 14px;
   }
 
-  .blog-page li > p {
-    margin-bottom: 0.2rem;
+  .blog-page ul {
+    padding-left: 22px;
+    margin-bottom: 16px;
   }
 
-  /* Link styling */
+  .blog-page li {
+    font-size: 15px;
+    line-height: 1.65;
+    margin-bottom: 7px;
+  }
+
   .blog-page a {
-    font-size: 14px; /* Smaller links */
+    font-size: 15px;
   }
 
-  /* Image styles */
-  .blog-page img {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-    margin: 10px 0;
+  .terms-contact {
+    padding: 16px;
+    border-radius: 10px;
   }
 
-  /* Blockquote styles */
-  .blog-page blockquote {
-    font-size: 14px; /* Smaller blockquote font */
-    padding-left: 12px; /* Reduced padding */
+  .terms-contact p {
+    align-items: flex-start;
   }
 
-  /* List styles */
-  .blog-page ul,
-  .blog-page ol {
-    font-size: 14px; /* Smaller font size for lists */
-    margin-left: 10px;
+  .terms-icon {
+    margin-top: 3px;
   }
 
-  .blog-page ul ul {
-    list-style-type: circle; /* Maintain circle style */
-  }
-
-  .blog-page ol {
-    list-style-type: decimal; /* Maintain decimal style */
-  }
-
-  /* Adjust ordered list item with strong tags */
-  ol li:has(strong) {
-    font-weight: normal; /* Reduce boldness for smaller screens */
-  }
-
-  /* Ensure only <strong> elements remain bold, and other text stays normal */
-  ol li:has(strong) p,
-  ol li:has(strong) p *:not(strong) {
-    font-weight: normal;
-  }
-
-  /* Add vertical margin if <p> contains only a <strong> */
-  ol li p:has(> strong:only-child) {
-    margin: 8px 0; /* Adjust margin for smaller screens */
+  .blog-page article::before {
+    top: -20px;
+    left: -120px;
+    width: 250px;
+    height: 250px;
   }
 }

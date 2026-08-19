@@ -39,7 +39,7 @@ export default function WhatWeDO() {
                 width={56}
                 height={56}
               />
-              <h1 className="text-4xl font-heading text-neutral-100 font-bold leading-[45px] tracking-[-0.9px]">
+              <h1 className="text-2xl md:text-4xl font-heading text-neutral-100 font-bold leading-[45px] tracking-[-0.9px]">
                 AI-Integrated Product Engineering
               </h1>
               <p className="text-neutral-80 text-base leading-[26px]">
