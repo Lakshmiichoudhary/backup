@@ -60,14 +60,28 @@ export default function WhatWeDO() {
             </div>
             <Link
               href={"services/agentic-ai-engineering"}
-              className="text-brand text-sm font-semibold leading-5 flex gap-[6px] items-center"
+              className="text-brand group text-sm font-semibold leading-5 flex gap-[6px] items-center"
             >
-              Learn more
+              <span className="relative">
+                Learn more
+                <span
+                  className="
+        absolute -bottom-1 left-0 h-px w-0
+        bg-current
+        transition-all duration-300
+        group-hover:w-full
+      "
+                />
+              </span>
               <Image
                 src={"/icons/brandMainArrow.svg"}
                 alt="Learn More"
                 width={16}
                 height={16}
+                className="
+      transition-transform duration-300
+      group-hover:translate-x-1
+    "
               />
             </Link>
           </article>
@@ -120,35 +134,49 @@ export function ServiceCard({
       `}
     >
       <div>
-      <Image src={icon} alt={title} width={48} height={48} />
+        <Image src={icon} alt={title} width={48} height={48} />
 
-      <h3
-        className={`
+        <h3
+          className={`
           font-heading leading-7 mt-5 tracking-[-0.45px] text-lg font-bold text-neutral-100
         `}
-      >
-        {title}
-      </h3>
+        >
+          {title}
+        </h3>
 
-      <p
-        className={`
+        <p
+          className={`
            text-neutral-80 text-sm leading-[22px] mt-[2px] ${descriptionClassName}
         `}
-      >
-        {description}
-      </p>
+        >
+          {description}
+        </p>
       </div>
 
       <Link
         href={""}
-        className="text-brand text-sm font-semibold leading-5 flex gap-[6px] items-center"
+        className="text-brand group text-sm font-semibold leading-5 flex gap-[6px] items-center"
       >
-        Learn more
+        <span className="relative">
+          Learn more
+          <span
+            className="
+        absolute -bottom-1 left-0 h-px w-0
+        bg-current
+        transition-all duration-300
+        group-hover:w-full
+      "
+          />
+        </span>
         <Image
           src={"/icons/brandMainArrow.svg"}
           alt="Learn More"
           width={16}
           height={16}
+          className="
+      transition-transform duration-300
+      group-hover:translate-x-1
+    "
         />
       </Link>
     </article>

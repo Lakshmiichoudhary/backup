@@ -18,7 +18,7 @@ export default function TitleTag({
   return (
     <span
       className={
-        "px-5 py-[7px] flex items-center gap-2 text-neutral-80 uppercase leading-4 text-xs font-medium tracking-[1.2px] rounded-full border border-neutral-8 w-max " +
+        "px-5 py-[7px] flex items-center gap-2 text-neutral-80 uppercase leading-4 text-xs font-medium tracking-[1.2px] rounded-full border border-neutral-8 w-fit xxs:w-max " +
         className
       }
     >

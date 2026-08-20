@@ -39,7 +39,7 @@ export default function ToolsNavbar() {
         <div className="flex w-full items-center justify-between px-4 py-4 sm:px-6">
           {/* Mobile Logo */}
           <Link
-            href="/"
+            href="/tools"
             aria-label="Empedance home"
             className="flex shrink-0 items-center lg:hidden"
           >
@@ -97,7 +97,6 @@ export default function ToolsNavbar() {
       {/* Mobile Navigation */}
       {isNavOpen && (
         <>
-          {/* Overlay */}
           <button
             type="button"
             aria-label="Close navigation"
@@ -109,7 +108,6 @@ export default function ToolsNavbar() {
             "
           />
 
-          {/* Menu */}
           <div
             className="
               fixed left-0 right-0 top-[76px] z-30

@@ -130,13 +130,18 @@ Message: ${formData.message}`,
             value={formData.message}
             onChange={(e) => handleChange("message", e.target.value)}
           />
-          <button type="submit" className="py-[15px] rounded-full bg-text-gradient text-text-primary shadow-box-shadow font-semibold text-sm leading-5 flex gap-2 justify-center items-center">
-            Send message
+          <button
+            type="submit"
+            className="group relative w-full py-[15px] px-8 rounded-full bg-text-gradient text-text-primary shadow-box-shadow font-semibold text-sm leading-5 flex gap-2 justify-center items-center transition-all duration-300 ease-out hover:opacity-95 hover:shadow-xl hover:-translate-y-0.5 active:scale-[0.98] active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none"
+          >
+            <span className="transition-transform duration-300 ease-out group-hover:translate-x-1  group-active:translate-x-0 group-active:translate-y-0">Send message</span>
+
             <Image
-              src={"/icons/messageIcon.svg"}
+              src="/icons/messageIcon.svg"
               alt="send Message"
               width={16}
               height={16}
+              className="transition-transform duration-300 ease-out group-hover:translate-x-1 group-active:translate-x-0 group-active:translate-y-0"
             />
           </button>
         </form>

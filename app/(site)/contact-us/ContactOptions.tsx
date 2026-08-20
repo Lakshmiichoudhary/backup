@@ -42,14 +42,20 @@ export function ContactOptions() {
           );
         })}
       </div>
-      <div className="bg-radial rounded-[22px] border border-neutral-8 min-h-[300px] bg-background-surface flex justify-center items-center">
+      <div className="bg-radial rounded-[22px] group border border-neutral-8 min-h-[300px] bg-background-surface flex justify-center items-center">
         <a
-          href=""
+          href="https://maps.app.goo.gl/hMazTP4GPcrwvKBe6"
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-full bg-background-secondary flex justify-center items-center gap-2 py-[10px] px-4"
+          className="rounded-full   hover:-translate-y-1
+        hover:border-brand bg-background-secondary flex justify-center items-center gap-2 py-[10px] px-4"
         >
-            <Image src={"/icons/location-blue.svg"} alt="location" width={16} height={16} />
+          <Image
+            src={"/icons/location-blue.svg"}
+            alt="location"
+            width={16}
+            height={16}
+          />
           <p className="text-text-main font-medium leading-5 text-sm">
             Bengaluru
           </p>

@@ -20,10 +20,7 @@ export default function Navbar() {
   const handleThemeToggle = () => {
     const newTheme = theme === "dark" ? "light" : "dark";
 
-    document.documentElement.classList.toggle(
-      "dark",
-      newTheme === "dark"
-    );
+    document.documentElement.classList.toggle("dark", newTheme === "dark");
 
     localStorage.setItem("theme", newTheme);
     setTheme(newTheme);
@@ -46,17 +43,11 @@ export default function Navbar() {
   }, [pathname]);
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") as
-      | "light"
-      | "dark"
-      | null;
+    const savedTheme = localStorage.getItem("theme") as "light" | "dark" | null;
 
     const currentTheme = savedTheme || "dark";
 
-    document.documentElement.classList.toggle(
-      "dark",
-      currentTheme === "dark"
-    );
+    document.documentElement.classList.toggle("dark", currentTheme === "dark");
 
     setTheme(currentTheme);
   }, []);
@@ -96,7 +87,7 @@ export default function Navbar() {
         <div className="hidden items-center lg:flex">
           <ul className="flex items-center gap-8 text-sm font-medium leading-5 text-neutral-80">
             {navOptions?.map((option) => {
-              const isActive = pathname === option.link;
+              // const isActive = pathname === option.link;
 
               return (
                 <li key={option.link}>
@@ -107,18 +98,15 @@ export default function Navbar() {
                       cursor-pointer
                       transition-colors duration-200
                       hover:text-brand
-                      ${
-                        isActive
-                          ? "font-semibold text-brand"
-                          : "text-neutral-80"
-                      }
+                      text-neutral-80
+                      
                     `}
                   >
                     {option.name}
 
-                    {isActive && (
+                    {/* {isActive && (
                       <span className="absolute -bottom-2 left-0 h-0.5 w-full rounded-full bg-brand" />
-                    )}
+                    )} */}
                   </Link>
                 </li>
               );
@@ -126,14 +114,11 @@ export default function Navbar() {
           </ul>
         </div>
 
-        {/* Desktop Actions */}
         <div className="hidden items-center justify-center gap-3 lg:flex">
           <button
             type="button"
             onClick={handleThemeToggle}
-            aria-label={`Switch to ${
-              theme === "dark" ? "light" : "dark"
-            } mode`}
+            aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
             className="
               flex h-11 w-11
               items-center justify-center
@@ -145,12 +130,7 @@ export default function Navbar() {
               hover:bg-neutral-5
             "
           >
-            <Image
-              src="/icons/theme.svg"
-              alt="Theme"
-              width={18}
-              height={18}
-            />
+            <Image src="/icons/theme.svg" alt="Theme" width={18} height={18} />
           </button>
 
           <Link
@@ -173,7 +153,6 @@ export default function Navbar() {
               height={16}
               aria-hidden="true"
             />
-
             Start a Project
           </Link>
         </div>
@@ -281,9 +260,7 @@ export default function Navbar() {
                         }
                       `}
                     >
-                      <span className="flex-1">
-                        {option.name}
-                      </span>
+                      <span className="flex-1">{option.name}</span>
 
                       {isActive && (
                         <span className="h-2 w-2 rounded-full bg-brand" />
@@ -353,7 +330,6 @@ export default function Navbar() {
                   height={16}
                   aria-hidden="true"
                 />
-
                 Start a Project
               </Link>
             </div>

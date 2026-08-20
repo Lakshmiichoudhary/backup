@@ -17,6 +17,22 @@ export const linkedInId =
 export const mailId = "help@empedance.com";
 export const hrMailId = "hr@empedance.com";
 
+export const clientsFoldersDO = [
+  "testing",
+  "empedance",
+  "mr_sports",
+  "ippo",
+  "sharjah_stadium",
+  "indigo_cab",
+  "school_mgmt",
+  "dubai_home_clean",
+  "expert_house",
+  "krs",
+  "espresso_bar",
+  "blog",
+  "Whatsaap",
+];
+
 export const navOptions = [
   {
     name: "Services",
@@ -46,28 +62,28 @@ export const contactOptions = [
     title: "WhatsApp",
     description: "Chat with us",
     icon: "/icons/whatsapp.svg",
-    href: "https://wa.me/910000000000",
+    href: "https://wa.me/919113887558",
     type: "external",
   },
   {
     title: "Call now",
-    description: "+91 00000 00000",
+    description: "+91 91138 87558",
     icon: "/icons/call-contact.svg",
-    href: "tel:+910000000000",
-    type: "external",
+    href: "tel:+919113887558",
+    type: "",
   },
   {
     title: "Email",
-    description: "hello@empedance.com",
+    description: "help@empedance.com",
     icon: "/icons/mail.svg",
-    href: "mailto:hello@empedance.com",
+    href: "mailto:help@empedance.com",
     type: "external",
   },
   {
     title: "Office",
     description: "Bengaluru, Karnataka, India",
     icon: "/icons/office-location.svg",
-    href: "https://maps.google.com/?q=Bengaluru,Karnataka,India",
+    href: "https://maps.app.goo.gl/hMazTP4GPcrwvKBe6",
     type: "external",
   },
 ];
@@ -204,88 +220,110 @@ export const services = [
 
 export const ventures = [
   {
-    id: "01",
+    name: "Latte on the rocks",
+    location: "Australia",
+    category: "Cafe",
+    year: "2026",
+    webLink: "https://latteontherocks.com.au/",
+  },
+  {
+    name: "Gale Street",
+    location: "Australia",
+    category: "Cafe",
+    year: "2026",
+    webLink: "https://galestreetespresso.com.au/",
+  },
+  {
+    name: "Pulse Espresso Bar",
+    location: "Australia",
+    category: "Cafe",
+    year: "2026",
+    webLink: "https://pulseespresso.com.au/",
+  },
+  {
     name: "Sharjah Cricket Stadium",
     location: "UAE",
     category: "Sports & Cricket",
     year: "2024",
+    webLink: "https://sharjahcricket.ae/",
   },
   {
-    id: "02",
     name: "Cyient DLM",
     location: "India",
     category: "Electronics & Test",
     year: "2024",
+    webLink: "https://www.cyientdlm.com/",
   },
   {
-    id: "03",
     name: "Expert House Chartered Accountants",
-    location: "",
+    location: "UAE",
     category: "Finance",
     year: "2023",
+    webLink: "https://expertca.ae/en",
   },
   {
-    id: "04",
     name: "IPPO",
-    location: "",
+    location: "UAE",
     category: "Consumer",
     year: "2024",
+    webLink: "https://ippo.co/",
   },
   {
-    id: "05",
     name: "RideAlly",
-    location: "",
+    location: "India",
     category: "Mobility",
     year: "2024",
+    webLink: "https://rideally.com/",
   },
   {
-    id: "06",
     name: "SCA - Sharjah Cricket Academy",
-    location: "",
+    location: "UAE",
     category: "Education",
     year: "2024",
+    webLink: "https://sharjahcricketacademy.com/",
   },
   {
-    id: "07",
     name: "CodingLimits",
-    location: "",
+    location: "India",
     category: "Education",
     year: "2023",
+    webLink: "https://codinglimits.com/",
   },
   {
-    id: "08",
     name: "QuotesLifetime",
-    location: "",
+    location: "India",
     category: "Content",
     year: "2023",
+    webLink: "https://quoteslifetime.com/#google_vignette",
   },
   {
-    id: "09",
     name: "Padel Pavilion",
-    location: "",
+    location: "UAE",
     category: "Sports & Booking",
     year: "2024",
+    webLink: "https://sbapadel.com/",
   },
   {
-    id: "10",
     name: "SBA — Sharjah Badminton Academy",
-    location: "",
+    location: "UAE",
     category: "Sports",
     year: "2024",
+    webLink: "https://sbapadel.com/",
   },
   {
-    id: "11",
     name: "Zenhome",
-    location: "",
+    location: "France",
     category: "Smart Home / AI",
     year: "2025",
+    webLink: "https://www.zenhome.io/",
   },
   {
-    id: "12",
     name: "Laundry Co.",
-    location: "",
+    location: "India",
+    flag: "🇮🇳",
     category: "On-demand Services",
     year: "2024",
+    webLink: "https://laundrycafes.in/",
   },
 ];
 
@@ -384,27 +422,37 @@ export const platforms = [
     description:
       "A complete WhatsApp automation suite — bulk messaging, template management, no-code bot training, live analytics and a developer-friendly REST API.",
     features: ["Bulk Messaging", "Bot Training", "Analytics", "REST API"],
-    image: "/images/ippoHomeScreen.png",
+    image: "/images/whatsapp-automation.png",
   },
   {
     productName: "School Management System",
     tagline: "Everything a school needs to run — in one system.",
-    category: ["dashboard"],
+    category: ["education", "dashboard"],
     icon: "/icons/school-management-icon.png",
     description:
-      "A complete WhatsApp automation suite — bulk messaging, template management, no-code bot training, live analytics and a developer-friendly REST API.",
-    features: ["Analytics", "REST API"],
-    image: "/images/ippoHomeScreen.png",
+      "A centralized school management platform for handling students, staff, classes, attendance, fees, academics and day-to-day school operations from one powerful dashboard.",
+    features: [
+      "Student Management",
+      "Attendance",
+      "Fee Management",
+      "Academic Planning",
+    ],
+    image: "/images/school-dashboard.jpg",
   },
   {
     productName: "Blue Cab",
     tagline: "Ride booking and fleet management, built to white-label.",
-    category: ["dashboard"],
+    category: ["mobility", "dashboard"],
     icon: "/icons/blue-cab-icon.svg",
     description:
-      "A complete WhatsApp automation suite — bulk messaging, template management, no-code bot training, live analytics and a developer-friendly REST API.",
-    features: ["Analytics", "REST API"],
-    image: "/images/ippoHomeScreen.png",
+      "A complete ride-booking and fleet management platform designed to simplify bookings, driver operations, trip tracking and fleet coordination under your own brand.",
+    features: [
+      "Ride Booking",
+      "Fleet Management",
+      "Trip Tracking",
+      "Driver Management",
+    ],
+    image: "/images/bluecab-dashboard.png",
   },
 ];
 
@@ -539,17 +587,37 @@ export const agenticAiQuestions = [
   {
     question: "Can you add AI to our existing product?",
     answer:
-      "Yes. Most of our AI work is integrated into products that already exist — we plug copilots, agents and automation into your current stack without a rebuild.",
+      "Yes. We can integrate AI into your existing web or mobile product without rebuilding it from scratch. We add copilots, RAG, agents, intelligent automation, or predictive features directly into your current stack.",
   },
   {
     question: "How do you keep AI outputs accurate and safe?",
     answer:
-      "Yes. Most of our AI work is integrated into products that already exist — we plug copilots, agents and automation into your current stack without a rebuild.",
+      "We use techniques such as retrieval-augmented generation, structured outputs, tool restrictions, evaluation datasets, confidence checks, and human-in-the-loop workflows. We also continuously monitor AI behavior in production.",
   },
   {
-    question: "Which models do you use?",
+    question: "Which AI models do you use?",
     answer:
-      "Yes. Most of our AI work is integrated into products that already exist — we plug copilots, agents and automation into your current stack without a rebuild.",
+      "We work with leading models from providers such as OpenAI, Anthropic, and Google Gemini. We choose the model based on accuracy, latency, cost, context requirements, and your product's specific needs rather than locking you into one provider.",
+  },
+  {
+    question: "Can you build AI agents that take actions, not just generate text?",
+    answer:
+      "Yes. We build agentic workflows that can reason through multi-step tasks, call APIs and tools, retrieve information, update systems, and complete actions. Human approval checkpoints can be added wherever additional control is required.",
+  },
+  {
+    question: "Can our private company data be used with AI?",
+    answer:
+      "Yes. We can build secure AI systems around your documents, databases, tickets, and internal knowledge without requiring you to expose sensitive data publicly. Access controls, retrieval permissions, and data isolation are designed into the architecture.",
+  },
+  {
+    question: "How do you measure whether an AI system is actually working?",
+    answer:
+      "We define measurable evaluation criteria before scaling. AI responses can be tested against representative datasets for accuracy, relevance, safety, latency, and cost, with tracing and monitoring used to identify issues in production.",
+  },
+  {
+    question: "How quickly can we get an AI prototype?",
+    answer:
+      "For well-defined use cases, we can usually build a working proof of value within days. We start with a focused workflow, validate it against real examples, and then productionize it once the expected business value is clear.",
   },
 ];
 

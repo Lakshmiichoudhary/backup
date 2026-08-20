@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 // --- SEO METADATA (AI & AGENTIC AI FOCUS) ---
 export const metadata: Metadata = {
   title: {
-    default: "Agentic AI & AI Product Engineering Studio | Empedance",
+    default: "Agentic AI & AI Product Engineering Studio",
     template: "%s | Empedance AI Studio",
   },
   description:

@@ -22,7 +22,7 @@ export default function ToolsSidebar() {
     py-6"
     >
       <div className="flex flex-col items-center">
-        <Link href="/" aria-label="Empedance home" className="mb-10">
+        <Link href="/tools" aria-label="Empedance home" className="mb-10">
           <Image
             width={87}
             height={57}

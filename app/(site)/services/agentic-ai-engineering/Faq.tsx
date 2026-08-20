@@ -6,7 +6,8 @@ import React from "react";
 
 export const Faq = () => {
   return (
-    <section className="px-6 text-neutral-100 sm:px-12 xl:px-[100px] py-32 bg-background-main flex flex-col justify-center items-center gap-14">
+    <section className="px-6 text-neutral-100 sm:px-12 xl:px-[100px] py-32 bg-background-main">
+      <div className="flex flex-col gap-14 max-w-[704px] mx-auto">
       <header className="flex flex-col gap-5">
         <TitleTag title="FAQ" className=" text-text-secondary" />
         <SectionHeader
@@ -42,6 +43,7 @@ export const Faq = () => {
             </details>
           );
         })}
+      </div>
       </div>
     </section>
   );

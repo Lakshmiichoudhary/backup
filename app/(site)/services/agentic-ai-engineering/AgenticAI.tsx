@@ -7,7 +7,7 @@ import React from "react";
 
 export default function AgenticAI() {
   return (
-    <section className="pb-24 bg-header-gradient px-6 text-neutral-100 sm:px-12 xl:px-[100px] pt-40  gap-4 flex flex-col">
+    <section className="pb-24 bg-header-gradient px-6 text-neutral-100 sm:px-12 xl:px-[100px] pt-[100px] xxs:pt-40  gap-4 flex flex-col">
       <Breadcrumbs
         items={[
           {
@@ -60,10 +60,10 @@ export default function AgenticAI() {
         </Link>
       </div>
 
-      <div className="flex gap-8 lg:gap-[102px] mt-12 border-t border-neutral-10 w-fit pt-8">
+      <div className="flex flex-col xs:flex-row gap-8 lg:gap-[102px] mt-12 border-t border-neutral-10 w-fit pt-8">
         {agenticAiStats?.map((item) => (
           <div key={item.label}>
-            <div className="text-4xl font-heading font-bold">{item.value}</div>
+            <div className="text-2xl sm:text-4xl font-heading font-bold">{item.value}</div>
             <div className="text-neutral-60 text-sm mt-1">{item.label}</div>
           </div>
         ))}

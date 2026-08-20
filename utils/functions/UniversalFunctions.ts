@@ -87,3 +87,13 @@ export const compressText = (id: string): string => {
 };
 
 export const year = new Date().getFullYear();
+
+export function toUrlSafeFilename(filename: string): string {
+  return filename
+    .normalize("NFKD") // Normalize accents
+    .replace(/[\u0300-\u036f]/g, "") // Remove diacritics
+    .replace(/[^a-zA-Z0-9.-]/g, "-") // Replace unsafe characters with dashes
+    .replace(/-+/g, "-") // Collapse multiple dashes
+    .replace(/^-+|-+$/g, "") // Trim leading/trailing dashes
+    .toLowerCase(); // Convert to lowercase
+}

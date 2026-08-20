@@ -12,7 +12,7 @@ interface BreadcrumbsProps {
 export const Breadcrumbs = ({ items }: BreadcrumbsProps) => {
   return (
     <nav aria-label="Breadcrumb" className="mb-7">
-      <ol className="flex items-center gap-2 text-sm">
+      <ol className="items-center gap-2 text-sm hidden xxs:flex">
         {items.map((item, index) => (
           <li key={`${item.label}-${index}`} className="flex items-center gap-2">
             {index > 0 && (

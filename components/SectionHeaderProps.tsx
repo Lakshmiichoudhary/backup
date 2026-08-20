@@ -16,7 +16,7 @@ export default function SectionHeader({
   return (
     <header className={`flex flex-col gap-5 ${className}`}>
 
-      <h2 className="text-neutral-100 font-heading text-5xl font-bold tracking-[-1.2px]">
+      <h2 className="text-neutral-100 font-heading text-3xl sm:text-5xl font-bold tracking-[-1.2px]">
         {title}
       </h2>
 

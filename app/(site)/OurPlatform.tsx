@@ -2,13 +2,14 @@
 
 import SectionHeader from "@/components/SectionHeaderProps";
 import TitleTag from "@/components/TitleTag";
-import { platforms } from "@/utils/constants";
+import { platforms, whatsaapNumber } from "@/utils/constants";
 import Image from "next/image";
 import React, { useRef, useState } from "react";
 import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Link from "next/link";
 
 export default function OurPlatform() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -21,7 +22,7 @@ export default function OurPlatform() {
   const sliderSettings = {
     dots: false,
     arrows: false,
-    infinite: true, 
+    infinite: true,
     speed: 500,
     autoplay: true,
     autoplaySpeed: 5000,
@@ -40,7 +41,6 @@ export default function OurPlatform() {
 
   return (
     <section className="bg-radial bg-background-secondary py-[108px] px-6 sm:px-12 xl:px-[100px] flex flex-col gap-32 justify-center items-center">
-     
       <header className="flex flex-col gap-5 justify-center items-center text-center">
         <TitleTag title="OUR PLATFORMS" />
 
@@ -89,11 +89,20 @@ export default function OurPlatform() {
                       ${isActive ? "bg-background-green" : "bg-background-main"}
                     `}
                   >
-                    <Image
-                      src={item.icon}
-                      alt={item.productName}
-                      width={24}
-                      height={24}
+                    <span
+                      className={`h-6 w-6 transition-colors duration-300 ${
+                        isActive ? "bg-text-primary" : "bg-neutral-60"
+                      }`}
+                      style={{
+                        maskImage: `url(${item.icon})`,
+                        WebkitMaskImage: `url(${item.icon})`,
+                        maskRepeat: "no-repeat",
+                        WebkitMaskRepeat: "no-repeat",
+                        maskPosition: "center",
+                        WebkitMaskPosition: "center",
+                        maskSize: "contain",
+                        WebkitMaskSize: "contain",
+                      }}
                     />
                   </div>
 
@@ -136,19 +145,26 @@ export default function OurPlatform() {
             </div>
 
             <div className="flex gap-3 flex-wrap">
-              <button className="bg-brand px-5 py-[13px] flex items-center gap-1 text-xs md:text-sm font-semibold leading-5 rounded-full text-text-primary">
-                White-label this for your brand
+              <button
+                type="button"
+                className="group bg-brand px-5 py-[13px] flex items-center gap-1.5 text-xs md:text-sm font-semibold leading-5 rounded-full text-text-primary transition-all duration-300 hover:bg-brand/90 hover:shadow-lg hover:shadow-brand/20 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+              >
+                <span>White-label this for your brand</span>
                 <Image
                   src="/icons/arrowRight.svg"
                   alt=""
                   width={16}
                   height={16}
+                  className="transition-transform duration-300 ease-out group-hover:translate-x-1"
                 />
               </button>
 
-              <button className="border border-neutral-8 px-5 py-[13px] text-sm font-semibold leading-5 rounded-full text-neutral-100">
+              <Link
+                href={`tel:${whatsaapNumber}`}
+                className="border border-neutral-8 px-5 py-[13px] text-xs md:text-sm font-semibold leading-5 rounded-full text-neutral-100 transition-all duration-300 hover:bg-neutral-8/10 hover:border-neutral-20 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-20"
+              >
                 Request a demo
-              </button>
+              </Link>
             </div>
           </article>
         </div>
@@ -174,7 +190,7 @@ export default function OurPlatform() {
                         transition-all
                         duration-300
                         cursor-pointer
-                        ${isActive ? "bg-neutral-50" : "bg-neutral-25"}
+                        ${isActive ? "bg-neutral-25" : "bg-neutral-16"}
                       `}
                     />
                   );
@@ -195,7 +211,7 @@ export default function OurPlatform() {
                       alt={platform.productName}
                       width={1000}
                       height={350}
-                      className="w-full h-auto object-contain transition-opacity duration-300"
+                      className="w-full h-auto object-contain rounded-[22px] transition-opacity duration-300"
                     />
                   </div>
                 ))}
